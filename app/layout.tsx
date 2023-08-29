@@ -3,7 +3,7 @@ import React from 'react';
 import { Ubuntu } from 'next/font/google';
 import Header from './_comps/Header';
 import Footer from './_comps/Footer';
-import type { Metadata } from 'next'
+
 import './globals.css'; // Import your global CSS file
 
 
