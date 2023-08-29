@@ -57,7 +57,10 @@ const Header: React.FC = () => {
           <NavLink href="/events" onClick={closeMobileMenu}>Events</NavLink>
           <NavLink href="/resources" onClick={closeMobileMenu}>Resources</NavLink>
           <NavLink href="/about" onClick={closeMobileMenu}>About Us</NavLink>
-          <div className='flex items-center p-1 border rounded cursor-pointer'>LOGIN<LogIn className='w-6 h-6' /></div>
+          {session?.user?.name && <div className='flex justify-center w-6 h-6 bg-gray-900 rounded-full item-center'>
+            <div>{session?.user?.name?.charAt(0).toUpperCase()}</div>
+          </div>}
+          {session?.user?.email ? <div className='flex items-center p-1 text-sm bg-gray-900 border rounded cursor-pointer' onClick={() => signOut()} >LOGOUT<LogOut className='w-4 h-4' /> </div> : <div className='flex items-center p-1 text-sm bg-gray-900 border rounded cursor-pointer' onClick={() => signIn()} >LOGIN < LogIn className='w-4 h-4' /></div>}
           {/* Add more navigation links as needed */}
         </div>
       )}
