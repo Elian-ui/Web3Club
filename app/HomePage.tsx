@@ -16,7 +16,7 @@ const HomePage = () => {
       <main className="container p-4 mx-auto">
         <section className="flex flex-col mb-8 md:flex-row">
           <div className="p-8 mb-4 rounded-lg shadow-lg md:w-1/2 md:mb-0">
-            <h2 className="mb-4 text-3xl font-semibold">The Present and Future of Web3</h2>
+            <h1 className="mb-4 text-3xl font-semibold">The Present and Future of Web3</h1>
             <p className="mb-6 text-lg">
               There is a huge demand online for Community Anything: Managers, Directors, and Leads. Even more traditionally technical positions, like Developers, are seeking Evangelists and Advocates like never before. The Web3 Community educates up-and-coming Web3 community professionals and leaders.
             </p>

@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Web 3 Club Africa | HomePage',
-  description: 'Embark on the forefront of Web3 innovation in Africa. Dive into limitless opportunities, overcoming dynamic challenges within the Web3 landscape. Network with visionary leaders in the African Web3 community.'
+  title: 'Web3 Club Africa | HomePage',
+  description: `Embark on the forefront of Web3 innovation in Africa. Dive into limitless opportunities, 
+  overcoming dynamic challenges within the Web3 landscape. 
+  Network with visionary leaders in the African Web3 community.`
 }
 
 

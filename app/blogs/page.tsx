@@ -6,7 +6,7 @@ import { getBlogs } from './GetBlogs';
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Web 3 Club Africa | Blog - Exploring the Latest in Decentralized Technologies',
+    title: 'Web3 Club Africa | Blog - Exploring the Latest in Decentralized Technologies',
     description: 'Dive into insightful articles and guides on Web3 technologies. Stay informed about the evolving world of blockchain, decentralization, and their impact on Africa. Learn from experts and enthusiasts within the African Web3 community.',
 }
 
