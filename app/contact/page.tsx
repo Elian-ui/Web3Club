@@ -29,7 +29,7 @@ const ContactPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className="w-1/2 mt-8">
+            <div className="md:w-1/2 w-full mt-8">
                 <h2 className="mb-2 text-xl font-semibold">Send us a Message</h2>
                 <div className="space-y-4">
                     <div className="flex flex-col">

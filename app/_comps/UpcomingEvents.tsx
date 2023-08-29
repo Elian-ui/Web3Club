@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 const eventsData = [
     {
         title: 'Blockchain Conference 2023',
@@ -36,7 +37,7 @@ const UpcomingEvents = () => {
                         <h3 className="mb-2 text-xl font-semibold">{event.title}</h3>
                         <p className="mb-2 text-gray-400">{event.date}</p>
                         <p className="mb-4 text-gray-400">{event.location}</p>
-                        <a href={event.link} className="text-blue-500 hover:underline">Learn more</a>
+                        <Link href={event.link} className="text-blue-500 hover:underline">Learn more</Link>
                     </div>
                 ))}
             </div>
