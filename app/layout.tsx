@@ -6,13 +6,10 @@ import Footer from './_comps/Footer';
 import type { Metadata } from 'next'
 import './globals.css'; // Import your global CSS file
 
-export const metadata: Metadata = {
-  title: '...',
-  description: '...',
-}
+
 
 import { SessionProvider } from 'next-auth/react';
-export const metadata2: Metadata = {
+export const metadata: Metadata = {
   title: 'Web3 Club Africa - Empowering Africa with Blockchain and Decentralization',
   description: 'Web3 Club Africa is a passionate community dedicated to educating, advocating, and innovating in the world of blockchain and decentralization. Join us on a journey to explore the transformative power of blockchain technology, cryptocurrencies, and decentralized applications (dApps) in Africa. Our team of experts and enthusiasts organizes educational events, provides insightful content, and creates networking opportunities. Headquartered in Kampala, Uganda, we aim to bridge the knowledge gap and shape the future of technology in Africa.'
 }
