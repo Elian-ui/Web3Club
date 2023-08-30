@@ -41,20 +41,20 @@ const DetailedBlogPost: React.FC<DetailedBlogPostProps> = async ({ post, blogId 
 
     return (
         <div className="container p-6 mx-auto mt-10 rounded-lg shadow-lg">
-            <div className='flex justify-between items-center'>
+            <div className='flex items-center justify-between'>
                 <h2 className="mb-4 text-3xl font-semibold">{post.title}</h2>
                 <DeletePost blogId={blogId} post={post} session={session} />
             </div>            <p className="mb-2 text-gray-500">
                 {postDate.toDateString()} by {post.author}
             </p>
-            <div className="w-full h-80">
+            <div className="w-full h-96">
                 <Image
                     src={post.image} // Make sure 'post.image' is the URL of the image
                     alt={`Image for ${post.title}`}
                     width={500}
                     height={500}
                     quality={100}
-                    className="self-center object-cover w-full h-full mb-4"
+                    className="self-center object-fill w-full h-full mb-4"
                 />
             </div>
             <div className="mt-6 prose max-w-none">
