@@ -47,16 +47,17 @@ const DetailedBlogPost: React.FC<DetailedBlogPostProps> = async ({ post, blogId 
             </div>            <p className="mb-2 text-gray-500">
                 {postDate.toDateString()} by {post.author}
             </p>
-            <div className="w-full h-96">
+            <div className="w-full h-96 md:h-80">
                 <Image
                     src={post.image} // Make sure 'post.image' is the URL of the image
                     alt={`Image for ${post.title}`}
                     width={500}
                     height={500}
                     quality={100}
-                    className="self-center object-fill w-full h-full mb-4"
+                    className="self-center object-fill w-full h-full mb-4 rounded "
                 />
             </div>
+
             <div className="mt-6 prose max-w-none">
                 {parse(post.content)}
             </div>
