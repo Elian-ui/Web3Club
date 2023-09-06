@@ -9,7 +9,9 @@ import './globals.css'; // Import your global CSS file
 
 
 import { SessionProvider } from 'next-auth/react';
-
+import Script from 'next/script';
+< Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9080992487953868"
+  crossOrigin="anonymous" />
 const ubuntu = Ubuntu({
   weight: '300',
   preload: true,

@@ -1,16 +1,18 @@
 'use client'
 import React, { useState } from 'react';
 import EventCard from './EventCard';
+import Link from 'next/link';
 
 interface Event {
-    id: number;
+    id: number | string;
     title: string;
-    date: string;
+    eventDate: string;
     startTime: string;
     stopTime: string;
     location: string;
-    description: string;
-    image: string;
+    content: string;
+    image: any; // Replace with the actual image URL
+    date: any
 }
 
 interface EventListProps {
@@ -32,7 +34,10 @@ const EventList: React.FC<EventListProps> = ({ events }) => {
 
     return (
         <div className="container p-4 mx-auto">
-            <h1 className="mb-4 text-2xl font-semibold">Upcoming Events</h1>
+            <div className='flex items-center justify-between mb-4'>
+                <h1 className="text-3xl font-semibold">Events</h1>
+                <Link href={'/events/addevent'} className='p-2 bg-gray-600 rounded'>AddEvent</Link>
+            </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
                 {events.slice(startIndex, endIndex).map((event) => (
                     <EventCard key={event.id} event={event} />

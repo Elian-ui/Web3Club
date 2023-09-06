@@ -38,6 +38,7 @@ const DetailedBlogPost: React.FC<DetailedBlogPostProps> = async ({ post, blogId 
     const blogs = await getBlogs()
 
     const postDate = new Date(post.date.seconds * 1000 + post.date.nanoseconds / 1000000);
+    console.log(post.image);
 
     return (
         <div className="container p-6 mx-auto mt-10 rounded-lg shadow-lg">

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -8,11 +10,14 @@ export const metadata: Metadata = {
 
 import React from 'react';
 import EventList from './EventList'; // Import the EventList component
-import { events } from './EventData'; // Import your event data
+import { getEvents } from './_comps/getEvents';
 
-const EventsPage = () => {
+const EventsPage = async () => {
+    const events = await getEvents()
+    console.log(events.data);
+
     return (
-        <EventList events={events} />
+        <EventList events={events.data} />
     );
 };
 

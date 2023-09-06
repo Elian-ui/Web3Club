@@ -22,17 +22,17 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileUpload }) => {
     );
 };
 interface ImageUploadProps {
-
+    folder: string;
     setImageURL: React.Dispatch<React.SetStateAction<string | null>>;
 }
-const ImageUpload: React.FC<ImageUploadProps> = ({ setImageURL }) => {
+const ImageUpload: React.FC<ImageUploadProps> = ({ setImageURL, folder }) => {
     const [uploadedFile, setUploadedFile] = useState<File | null>(null);
     const [downloadURL, setDownloadURL] = useState<string | null>(null);
     const [uploadProgress, setUploadProgress] = useState<number>(0);
 
     const handleFileUpload = async (file: File) => {
         const storage = getStorage(app);
-        const storageRef = ref(storage, 'uploads/' + file.name);
+        const storageRef = ref(storage, `uploads/${folder}` + file.name);
 
         const uploadTask = uploadBytesResumable(storageRef, file);
 

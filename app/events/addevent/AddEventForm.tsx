@@ -3,6 +3,7 @@ import ImageUpload from '@/app/_comps/ImageUpload';
 import React from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import DateTimePicker from '../_comps/DateTimePicker';
 
 interface AddBlogFormProps {
     title: string;
@@ -13,6 +14,8 @@ interface AddBlogFormProps {
     isPublishing: boolean;
     setImageURL: React.Dispatch<React.SetStateAction<string | null>>;
     imageURL: string | null;
+    date: any;
+    setDate: any
 }
 const AddBlogForm: React.FC<AddBlogFormProps> = ({
     title,
@@ -22,7 +25,8 @@ const AddBlogForm: React.FC<AddBlogFormProps> = ({
     handlePublish,
     isPublishing,
     setImageURL,
-    imageURL
+    imageURL, date,
+    setDate
 }) => {
     return (
         <div className=''>
@@ -50,7 +54,8 @@ const AddBlogForm: React.FC<AddBlogFormProps> = ({
                     <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: content }} />
                 </div>
             </div>
-            <ImageUpload setImageURL={setImageURL} folder='blogs' />
+            <ImageUpload setImageURL={setImageURL} folder='events' />
+            <DateTimePicker date={date} setDate={setDate} />
             {imageURL && <div>Image Uploaded</div>}
             <button
                 onClick={handlePublish}
@@ -59,6 +64,7 @@ const AddBlogForm: React.FC<AddBlogFormProps> = ({
             >
                 {isPublishing ? 'Publishing...' : 'Publish'}
             </button>
+
         </div>
     );
 };
