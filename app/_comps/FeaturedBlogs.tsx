@@ -28,7 +28,7 @@ const FeaturedBlogs: React.FC = async () => {
     <div>
       <div className='p-4 pl-0 text-xl font-bold'>Featured Blogs</div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {featuredblogs.data.slice(0, 2).map((blog: BlogData) => (
+        {featuredblogs.data.slice(0, 3).map((blog: BlogData) => (
           <Link href={`/blogs/${blog.id}`} key={blog.id}>
             <div className="p-4 shadow-md dark:shadow-white">
               <h3 className="mb-2 text-xl font-semibold">{blog.title}</h3>
