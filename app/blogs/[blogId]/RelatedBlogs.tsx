@@ -26,7 +26,7 @@ const RelatedBlogs: React.FC<RelatedBlogsProps> = ({ blogs }) => {
                             alt={`Image for ${blog.title}`}
                             width={300}
                             height={200}
-                            className="mb-2 rounded"
+                            className="w-full mb-2 rounded"
                         />
                         <h4 className="mb-2 text-base font-semibold">{blog.title}</h4>
                         {/* <div className="mb-4 overflow-hidden text-gray-400 text-ellipsis">{parse(blog.content.split('<p>').join('</p>').slice(0, 100))}</div> */}
