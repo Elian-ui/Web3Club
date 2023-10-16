@@ -60,7 +60,7 @@ const Header: React.FC = () => {
           {session?.user?.name && <div className='flex justify-center w-6 h-6 bg-gray-900 rounded-full item-center'>
             <div>{session?.user?.name?.charAt(0).toUpperCase()}</div>
           </div>}
-          {session?.user?.email ? <div className='flex items-center justify-around p-1 text-sm bg-gray-900 border rounded cursor-pointer w-1/3' onClick={() => signOut()} >LOGOUT<LogOut className='w-4 h-4' /> </div> : <div className='flex items-center p-1 text-sm bg-gray-900 border rounded cursor-pointer w-1/3' onClick={() => signIn()} >LOGIN < LogIn className='w-4 h-4' /></div>}
+          {session?.user?.email ? <div className='flex items-center justify-around w-1/3 p-1 text-sm text-white bg-gray-900 border rounded cursor-pointer' onClick={() => signOut()} >LOGOUT<LogOut className='w-4 h-4' /> </div> : <div className='flex items-center w-1/3 p-1 text-sm text-white bg-gray-900 border rounded cursor-pointer' onClick={() => signIn()} >LOGIN < LogIn className='w-4 h-4' /></div>}
           {/* Add more navigation links as needed */}
         </div>
       )}

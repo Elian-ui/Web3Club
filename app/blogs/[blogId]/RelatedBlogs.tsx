@@ -20,7 +20,7 @@ const RelatedBlogs: React.FC<RelatedBlogsProps> = ({ blogs }) => {
             <h3 className="mb-4 text-lg font-semibold">Related Blogs</h3>
             <div className="grid grid-cols-1 gap-4 overflow-y-auto md:grid-cols-2 lg:grid-cols-3">
                 {blogs.map(blog => (
-                    <Link href={`/blogs/${blog.id}`} key={blog.id} className="p-4 mb-2 rounded-md shadow-md dark:shadow-white">
+                    <Link href={`/blogs/${blog.id}`} key={blog.id} className="p-2 mb-2 rounded-md shadow-md dark:shadow-white">
                         <Image
                             src={blog.image}
                             alt={`Image for ${blog.title}`}
